@@ -1,0 +1,4 @@
+taichi
+numpy
+pytest
+pillow
