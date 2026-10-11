@@ -1,12 +1,17 @@
-# GPU Fluid & Particle Simulator
+# GPU Aerodynamic Flow & Drag Simulator
 
- A high-performance, real-time Smoothed Particle Hydrodynamics (SPH) fluid and granular dynamics simulation running on the GPU using Taichi and Python.
+ A high-performance aerodynamic vector field and airflow drag simulation running entirely on Apple Metal / GPU via Taichi and Python.
+
+ ![Aerodynamic Flow Simulation Demo](assets/demo_flow.gif)
 
 ## Features
- - Real-time SPH fluid mechanics running on GPU (Apple Metal / CUDA / Vulkan).
- - Spatial grid hashing for accelerated particle neighborhood search.
- - Pressure, viscosity, and surface tension force solvers.
- - High-framerate interactive GUI with velocity and density shader color-coding.
+ - **GPU-Accelerated Particle Dynamics:** Simulates 50,000+ aerodynamic stream particles concurrently with zero CPU overhead.
+ - **Dynamic Aerodynamic Drag Metric:** Color-coded telemetry visualizing flow regimes based on local shear and velocity dissipation:
+   - 🟢 **Green:** Laminar / low-resistance freestream.
+   - 🟡 **Yellow:** Transitional shear boundary.
+   - 🔴 **Red:** Turbulent separation and high drag recirculation zones.
+ - **Interactive Vortex Interaction:** Real-time vortex generator coupling smooth velocity transitions with mouse cursor influence.
+ - **Automated Validation:** Test suite covering numeric stability and boundary encapsulation via `pytest`.
 
 ## Installation
 
@@ -20,9 +25,27 @@
 
  ## Usage
 
+ Run the interactive GPU simulation:
+
  ```bash
  python main.py
  ```
+
+ Render the offline demo GIF:
+
+ ```bash
+ python scripts/export_demo_gif.py
+ ```
+
+ Run test suite:
+
+ ```bash
+ pytest
+ ```
+
+## Control
+
+ Left Mouse Click & Drag: Introduce an aerodynamic obstacle and turbulence wake into the flow stream.
 
 ## Roadmap
 
