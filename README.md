@@ -49,8 +49,8 @@
 
 ## Roadmap
 
- - [ ] Core SPH physics kernel (density, pressure, viscosity)
- - [ ] Spatial grid hashing for neighbor search
- - [ ] Interactive GPU viewport with velocity-based shaders
- - [ ] Obstacle collision and container interaction
- - [ ] Automated tests & demo GIF export
+ - [x] Core SPH physics kernel (density, pressure, viscosity)
+ - [x] Spatial grid hashing for neighbor search
+ - [x] Interactive GPU viewport with velocity-based shaders
+ - [x] Obstacle collision and container interaction
+ - [x] Automated tests & demo GIF export
